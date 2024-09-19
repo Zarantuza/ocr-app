@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Image to Word Converter</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Img to Text</h1>
+            <p>Convert images to editable text in a Word document</p>
+        </header>
+        
+        <main>
+            <div class="upload-section">
+                <input type="file" id="upload" accept="image/*" multiple>
+                <label for="upload" class="upload-button">Choose Images</label>
+                <p id="file-name">No file chosen</p>
+            </div>
+            
+            <div class="options-section">
+                <div class="option">
+                    <label for="fontFamily">Font:</label>
+                    <select id="fontFamily">
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Calibri">Calibri</option>
+                        <option value="Cambria">Cambria</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label for="fontSize">Size:</label>
+                    <select id="fontSize">
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12" selected>12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="convert" class="convert-button">Convert to Word</button>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <p id="statusMessage"></p>
+            </div>
+        </main>
+    </div>
+
+    <div class="donation-section">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="leopeyrecostamail@gmail.com" />
+            <input type="hidden" name="currency_code" value="EUR" />
+            <input type="hidden" name="amount" value="3.00" />
+            <button type="submit" class="donate-button">
+                <span>Support</span>
+                <i class="fab fa-paypal"></i>
+            </button>
+        </form>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
